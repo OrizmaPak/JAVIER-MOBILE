@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .bg-white{
+        background-color: white;
+    }
+    .contentContainer{
+        @apply w-full h-full box-border 
+    }
+    .bgwb {
+        @apply bg-white dark:bg-litblack;
+    }
+    .bgbw {
+        @apply dark:bg-white bg-litblack;
+    }
+    .bgmodwb{
+        @apply bg-white dark:bg-litblackm;
+    }
+    .txtbw{
+        @apply text-litblack dark:text-[#e8e8e8];
+    }
+    .hover{
+        @apply hover:opacity-70 hover:text-opacity-100;
+    }
+    .hoverwb{
+        @apply hover:bg-[#B3B3B3FF] dark:hover:bg-[#333333FF];
+    }
+    .opensuggestmodal{
+        @apply !w-[280px] !h-[150px] !visible !opacity-100
+    }
+    .opensuggestmodal2{
+        @apply !w-[280px] !h-[250px] max-h-[270px] !visible !opacity-100
+    }
+    .darkshadow{
+        @apply dark:shadow-[#1C1C1CFF]
+    }
+    
+}
+ .content-auto {
+            content-visibility: auto;
+        }
+*{
+    transition:all 0.8s ease;
+    box-sizing: border-box;
+    font-family: javierfont;
+}
+.hidden{
+    display: none;
+}
+.navfooter{
+    height: clamp(2.625rem, 2.3454rem + 1.4912vw, 3.6875rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.navfooterimg{
+    width: clamp(1.3125rem, 1.1645rem + 0.7895vw, 1.875rem);
+}
+.navfooterimgadd{
+    width: clamp(2.8125rem, 2.5164rem + 1.5789vw, 3.9375rem);
+}
+.navfootertxt{
+    font-size: clamp(0.625rem, 0.5263rem + 0.5263vw, 1rem);
+}
