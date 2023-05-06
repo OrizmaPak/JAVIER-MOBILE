@@ -98,7 +98,7 @@
 }
 .navheaderimg{
     width: 30px;
-    height:70%;
+    height:30px;
     padding: auto 20px
 }
 .navheadertxt{
@@ -183,8 +183,14 @@
       transform: translateX(-100%);
     }
   }
-
-  
+.profilefont{
+    font-size: clamp(1.125rem, 0.9605rem + 0.8772vw, 1.75rem);
+}
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
   
   
   
