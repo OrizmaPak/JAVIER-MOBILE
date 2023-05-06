@@ -1,3 +1,23 @@
+const searchHeader =()=>{
+    document.getElementById('navHeader').innerHTML = `
+        <img 
+            onclick="mainHeader()"
+            class="w-[50px] h-[50px] " 
+            src="./public/leftr.png" alt="">
+        <input class="w-[80%] h-10 rounded-md px-4 font-semibold bg-[#e6e6e6] " placeholder="Search" type="text">
+        <img class="navheaderimg inverter" src="./public/search.png" alt="">
+    `
+    document.getElementById('modalContainer').innerHTML = `
+    <div class="flex justify-end w-full px-2 my-2 cursor-pointer p h-fit">
+    <img
+    onclick="this.parentElement.parentElement.style.height = '0px'"
+     class="w-4 inverterRev" src="./public/close.png" alt="">
+ </div>
+ <!-- SEARCH -->
+ <P class="relative top-[-25px] text-center txtbw anton w-fit mx-auto">looking for?</P>`
+    document.getElementById('modalContainer').style.height = '105vh'
+}
+
 const mainHeader =()=>{
     document.getElementById('navHeader').innerHTML = `
         <img 
@@ -8,8 +28,10 @@ const mainHeader =()=>{
                 <p id="following" onclick="followingContent();this.classList.add('border-b-2');this.nextElementSibling.classList.remove('border-b-2')"class="mx-2 cursor-pointer anton opacity-80">Following</p>
                 <p id="forYou" onclick="forYouContent();this.classList.add('border-b-2');this.previousElementSibling.classList.remove('border-b-2')" class="mx-2 border-b-2 cursor-pointer anton">For You</p>
             </div>
-            <img class="navheaderimg inverter" src="./public/search.png" alt="">
+            <img onclick="searchHeader()" class="navheaderimg inverter" src="./public/search.png" alt="">
     `
+    document.getElementById('modalContainer').style.height = '0px'
+    document.getElementById('modalContainer').innerHTML = ``
 }
 
 const followingContent =()=>{
@@ -322,7 +344,7 @@ const rightNav =(action)=>{
 }
 
 
-window.addEventListener('load', e=>document.getElementById('forYou').click())
+window.addEventListener('load', e=>{mainHeader();if(document.getElementById('forYou'))document.getElementById('forYou').click();})
 
 setTimeout(() => {
     // document.getElementById('modeSwitch').click();
