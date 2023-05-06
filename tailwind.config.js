@@ -15,6 +15,7 @@ module.exports = {
         'jvblue': '#26348c',
         'txblack': '#000000d7',
         'litblackm': '#212121FF',
+        'white': '#FFFFFF',
         'litblack': '#121212',
         // 'litblack': '#333333FF',
         'litlight': '#FFFFF7',
@@ -26,6 +27,7 @@ module.exports = {
         'gray-dark': '#273444',
         'gray': '#8492a6',
         'gray-light': '#d3dce6',
+        'black': '#000000',
       },
        fontFamily: {
         sans: ['Graphik', 'sans-serif'],
